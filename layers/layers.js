@@ -83,9 +83,9 @@ var lyr_bdy_wng_5 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_bdy_wng_5, 
                 style: style_bdy_wng_5,
-                popuplayertitle: 'ขอบเขตตำบล',
+                popuplayertitle: 'bdy_wng',
                 interactive: true,
-                title: '<img src="styles/legend/bdy_wng_5.png" /> bdy_wng'
+                title: '<img src="styles/legend/bdy_wng_5.png" /> ขอบเขตตำบล'
             });
 var group_MTM = new ol.layer.Group({
                                 layers: [lyr_Flood_2,lyr_str_wng_3,lyr_test_4,lyr_bdy_wng_5,],
