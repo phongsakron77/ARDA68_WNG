@@ -37,7 +37,7 @@ var lyr_Flood_2 = new ol.layer.Vector({
                 style: style_Flood_2,
                 popuplayertitle: 'Flood',
                 interactive: true,
-                title: '<img src="styles/legend/Flood_2.png" /> Flood'
+                title: '<img src="styles/legend/Flood_2.png" /> พื้นที่น้ำท่วม'
             });
 var format_str_wng_3 = new ol.format.GeoJSON();
 var features_str_wng_3 = format_str_wng_3.readFeatures(json_str_wng_3, 
@@ -52,7 +52,7 @@ var lyr_str_wng_3 = new ol.layer.Vector({
                 style: style_str_wng_3,
                 popuplayertitle: 'str_wng',
                 interactive: true,
-                title: '<img src="styles/legend/str_wng_3.png" /> str_wng'
+                title: '<img src="styles/legend/str_wng_3.png" /> เส้นทางน้ำ'
             });
 var format_test_4 = new ol.format.GeoJSON();
 var features_test_4 = format_test_4.readFeatures(json_test_4, 
@@ -67,11 +67,11 @@ var lyr_test_4 = new ol.layer.Vector({
                 style: style_test_4,
                 popuplayertitle: 'test',
                 interactive: true,
-    title: 'test<br />\
-    <img src="styles/legend/test_4_0.png" /> A<br />\
-    <img src="styles/legend/test_4_1.png" /> M<br />\
-    <img src="styles/legend/test_4_2.png" /> U<br />\
-    <img src="styles/legend/test_4_3.png" /> W<br />' });
+    title: 'การใช้ประโยชน์ที่ดิน<br />\
+    <img src="styles/legend/test_4_0.png" /> พื้นที่เกษตร<br />\
+    <img src="styles/legend/test_4_1.png" /> พื้นที่เบ็ดเตล็ด<br />\
+    <img src="styles/legend/test_4_2.png" /> พื้นที่ชุมชนและสิ่งปลูกสร้าง<br />\
+    <img src="styles/legend/test_4_3.png" /> พื้นที่น้ำ<br />' });
 var format_bdy_wng_5 = new ol.format.GeoJSON();
 var features_bdy_wng_5 = format_bdy_wng_5.readFeatures(json_bdy_wng_5, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32647'});
@@ -83,18 +83,14 @@ var lyr_bdy_wng_5 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_bdy_wng_5, 
                 style: style_bdy_wng_5,
-                popuplayertitle: 'bdy_wng',
+                popuplayertitle: 'ขอบเขตตำบล',
                 interactive: true,
                 title: '<img src="styles/legend/bdy_wng_5.png" /> bdy_wng'
             });
 var group_MTM = new ol.layer.Group({
                                 layers: [lyr_Flood_2,lyr_str_wng_3,lyr_test_4,lyr_bdy_wng_5,],
                                 fold: 'open',
-                                title: 'MTM'});
-var group_SPM = new ol.layer.Group({
-                                layers: [],
-                                fold: 'close',
-                                title: 'SPM'});
+                                title: 'ชั้นข้อมูลทั้งหมด'});
 
 lyr_GoogleMaps_0.setVisible(true);lyr_GoogleSatellite_1.setVisible(true);lyr_Flood_2.setVisible(true);lyr_str_wng_3.setVisible(true);lyr_test_4.setVisible(true);lyr_bdy_wng_5.setVisible(true);
 var layersList = [lyr_GoogleMaps_0,lyr_GoogleSatellite_1,group_MTM];
